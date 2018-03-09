@@ -4,7 +4,7 @@ var gulp = require('gulp'),
     log = require('fancy-log');
 
 gulp.task('BuildDockerImage',function(){
-	exec('cat pwd.txt | docker login --username ellensu --password-stdin');
+	exec('cat pwd.txt | docker login --username babbit0809 --password-stdin');
 	exec('docker build -f Dockerfile -t ellensu/nginxweb:' + args.buildversion +' -t ellensu/nginxweb:latest --rm --no-cache .', function (err,outlog,errlog){
 		console.log(outlog);
 		console.log(errlog);
